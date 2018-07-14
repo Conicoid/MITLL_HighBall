@@ -3018,8 +3018,8 @@ LETTER landscape</description>
 <instances>
 <instance part="VR-01" gate="G$1" x="43.18" y="157.48"/>
 <instance part="VR-02" gate="G$1" x="43.18" y="129.54"/>
-<instance part="J-01" gate="G$1" x="15.24" y="162.56"/>
-<instance part="GND1" gate="1" x="25.4" y="157.48"/>
+<instance part="J-01" gate="G$1" x="15.24" y="165.1" rot="MR180"/>
+<instance part="GND1" gate="1" x="25.4" y="160.02"/>
 <instance part="GND2" gate="1" x="35.56" y="157.48"/>
 <instance part="GND3" gate="1" x="35.56" y="127"/>
 <instance part="GND4" gate="1" x="66.04" y="127"/>
@@ -3034,25 +3034,18 @@ LETTER landscape</description>
 <nets>
 <net name="VBAT" class="0">
 <segment>
-<pinref part="J-01" gate="G$1" pin="2"/>
 <pinref part="VR-01" gate="G$1" pin="IN+"/>
-<wire x1="22.86" y1="165.1" x2="30.48" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="165.1" x2="38.1" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="165.1" x2="30.48" y2="139.7" width="0.1524" layer="91"/>
-<junction x="30.48" y="165.1"/>
-<wire x1="30.48" y1="139.7" x2="30.48" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="165.1" x2="30.48" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="VR-02" gate="G$1" pin="IN+"/>
 <wire x1="30.48" y1="137.16" x2="38.1" y2="137.16" width="0.1524" layer="91"/>
-<label x="22.86" y="165.1" size="1.778" layer="95"/>
+<label x="27.94" y="167.64" size="1.778" layer="95"/>
+<pinref part="J-01" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="165.1" x2="30.48" y2="165.1" width="0.1524" layer="91"/>
+<junction x="30.48" y="165.1"/>
 </segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<pinref part="J-01" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="162.56" x2="25.4" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="162.56" x2="25.4" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-</segment>
 <segment>
 <pinref part="VR-01" gate="G$1" pin="IN-"/>
 <wire x1="35.56" y1="160.02" x2="38.1" y2="160.02" width="0.1524" layer="91"/>
@@ -3074,6 +3067,11 @@ LETTER landscape</description>
 <pinref part="VR-02" gate="G$1" pin="OUT-"/>
 <wire x1="66.04" y1="129.54" x2="66.04" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="132.08" x2="63.5" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J-01" gate="G$1" pin="2"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="22.86" y1="162.56" x2="25.4" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC_1" class="0">
