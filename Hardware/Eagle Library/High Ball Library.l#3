@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="inch" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -231,9 +231,48 @@
 <pad name="D10" x="30.48" y="14.605" drill="0.9"/>
 <pad name="D1/TXO" x="30.48" y="17.145" drill="0.9"/>
 <pad name="D0/RXI" x="30.48" y="19.685" drill="0.9"/>
-<pad name="3V3" x="30.48" y="22.225" drill="0.9"/>
+<pad name="3V3_2" x="30.48" y="22.225" drill="0.9"/>
 <pad name="D13" x="30.48" y="6.985" drill="0.9"/>
 <pad name="GND_2" x="30.48" y="24.765" drill="0.9"/>
+</package>
+<package name="MS5803-14BA_BREAKOUT">
+<wire x1="0" y1="0" x2="20.32" y2="0" width="0.127" layer="21"/>
+<wire x1="20.32" y1="0" x2="20.32" y2="17.78" width="0.127" layer="21"/>
+<wire x1="20.32" y1="17.78" x2="0" y2="17.78" width="0.127" layer="21"/>
+<wire x1="0" y1="17.78" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="GND" x="2.54" y="1.27" drill="0.6"/>
+<pad name="3V3" x="5.08" y="1.27" drill="0.6"/>
+<pad name="SDA/SDI" x="7.62" y="1.27" drill="0.6"/>
+<pad name="SCL/SCLK" x="10.16" y="1.27" drill="0.6"/>
+<pad name="SDO" x="12.7" y="1.27" drill="0.6"/>
+<pad name="AD/CS" x="15.24" y="1.27" drill="0.6"/>
+<pad name="PS" x="17.78" y="1.27" drill="0.6"/>
+<text x="1.27" y="12.7" size="1.27" layer="25">&gt;Name</text>
+<text x="1.27" y="10.16" size="1.27" layer="27">&gt;Value</text>
+<hole x="17.78" y="15.24" drill="3.2639"/>
+<hole x="2.54" y="7.62" drill="3.2639"/>
+<text x="1.27" y="15.24" size="1.27" layer="21">MS5803-12BA</text>
+</package>
+<package name="QWIIC_TITAN_X1_BREAKOUT">
+<wire x1="0" y1="0" x2="30.48" y2="0" width="0.127" layer="21"/>
+<wire x1="30.48" y1="0" x2="30.48" y2="25.4" width="0.127" layer="21"/>
+<wire x1="30.48" y1="25.4" x2="0" y2="25.4" width="0.127" layer="21"/>
+<wire x1="0" y1="25.4" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="10.16" y="1.27" drill="0.6"/>
+<pad name="P$2" x="12.7" y="1.27" drill="0.6"/>
+<pad name="P$3" x="15.24" y="1.27" drill="0.6"/>
+<pad name="P$4" x="17.78" y="1.27" drill="0.6"/>
+<pad name="P$5" x="20.32" y="1.27" drill="0.6"/>
+<pad name="P$6" x="10.16" y="24.13" drill="0.6"/>
+<pad name="P$7" x="12.7" y="24.13" drill="0.6"/>
+<pad name="P$8" x="15.24" y="24.13" drill="0.6"/>
+<pad name="P$9" x="17.78" y="24.13" drill="0.6"/>
+<pad name="P$10" x="20.32" y="24.13" drill="0.6"/>
+<hole x="5.08" y="22.86" drill="3.2639"/>
+<hole x="25.4" y="22.86" drill="3.2639"/>
+<text x="1.27" y="16.51" size="2.54" layer="25">&gt;Name</text>
+<text x="1.27" y="12.7" size="2.54" layer="27">&gt;Value</text>
+<text x="1.27" y="8.89" size="1.27" layer="21">Qwiic Titan X10 Breakout</text>
 </package>
 </packages>
 <packages3d>
@@ -268,31 +307,68 @@
 <text x="2.54" y="7.62" size="1.778" layer="95">&gt;Name</text>
 </symbol>
 <symbol name="RAZOR_IMU">
-<pin name="GND" x="-5.08" y="27.94" length="middle"/>
+<pin name="GND" x="-5.08" y="22.86" length="middle"/>
 <pin name="VCC" x="-5.08" y="30.48" length="middle"/>
-<pin name="P$3" x="-5.08" y="22.86" length="middle"/>
-<pin name="P$4" x="-5.08" y="20.32" length="middle"/>
-<pin name="D8" x="20.32" y="30.48" length="middle" rot="R180"/>
-<pin name="D9" x="20.32" y="27.94" length="middle" rot="R180"/>
-<pin name="D10" x="20.32" y="25.4" length="middle" rot="R180"/>
-<pin name="D11" x="20.32" y="22.86" length="middle" rot="R180"/>
-<pin name="D12" x="20.32" y="20.32" length="middle" rot="R180"/>
-<pin name="D13" x="20.32" y="17.78" length="middle" rot="R180"/>
-<pin name="RX" x="-5.08" y="15.24" length="middle"/>
-<pin name="TX" x="-5.08" y="12.7" length="middle"/>
-<pin name="A0" x="20.32" y="12.7" length="middle" rot="R180"/>
-<pin name="A1" x="20.32" y="10.16" length="middle" rot="R180"/>
-<pin name="A2" x="20.32" y="7.62" length="middle" rot="R180"/>
-<pin name="A3" x="20.32" y="5.08" length="middle" rot="R180"/>
-<pin name="A4" x="20.32" y="2.54" length="middle" rot="R180"/>
-<wire x1="0" y1="33.02" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="15.24" y2="0" width="0.254" layer="94"/>
-<wire x1="15.24" y1="0" x2="15.24" y2="33.02" width="0.254" layer="94"/>
-<wire x1="15.24" y1="33.02" x2="0" y2="33.02" width="0.254" layer="94"/>
+<pin name="SDA" x="-5.08" y="12.7" length="middle"/>
+<pin name="SCL" x="-5.08" y="10.16" length="middle"/>
+<pin name="D8" x="25.4" y="27.94" length="middle" rot="R180"/>
+<pin name="D9" x="25.4" y="25.4" length="middle" rot="R180"/>
+<pin name="D10" x="25.4" y="22.86" length="middle" rot="R180"/>
+<pin name="D11" x="25.4" y="20.32" length="middle" rot="R180"/>
+<pin name="D12" x="25.4" y="17.78" length="middle" rot="R180"/>
+<pin name="D13" x="25.4" y="15.24" length="middle" rot="R180"/>
+<pin name="RX" x="-5.08" y="0" length="middle"/>
+<pin name="TX" x="-5.08" y="-2.54" length="middle"/>
+<pin name="A0" x="25.4" y="10.16" length="middle" rot="R180"/>
+<pin name="A1" x="25.4" y="7.62" length="middle" rot="R180"/>
+<pin name="A2" x="25.4" y="5.08" length="middle" rot="R180"/>
+<pin name="A3" x="25.4" y="2.54" length="middle" rot="R180"/>
+<pin name="A4" x="25.4" y="0" length="middle" rot="R180"/>
+<wire x1="0" y1="33.02" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="20.32" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-5.08" x2="20.32" y2="33.02" width="0.254" layer="94"/>
+<wire x1="20.32" y1="33.02" x2="0" y2="33.02" width="0.254" layer="94"/>
 <text x="2.54" y="10.16" size="1.778" layer="25">&gt;Name</text>
 <text x="2.54" y="12.7" size="1.778" layer="25">&gt;Name</text>
-<text x="2.54" y="33.02" size="1.778" layer="95">&gt;Name</text>
-<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;Value</text>
+<text x="5.08" y="33.02" size="1.778" layer="95">&gt;Name</text>
+<text x="5.08" y="-7.62" size="1.778" layer="96">&gt;Value</text>
+<pin name="VBAT" x="-5.08" y="25.4" length="middle"/>
+<pin name="GND_1" x="-5.08" y="15.24" length="middle"/>
+<pin name="3V3_2" x="-5.08" y="5.08" length="middle"/>
+<pin name="GND_2" x="-5.08" y="2.54" length="middle"/>
+<pin name="3V3_1" x="-5.08" y="17.78" length="middle"/>
+</symbol>
+<symbol name="MS5803-14BA_BREAKOUT">
+<pin name="3V3" x="-5.08" y="12.7" length="middle"/>
+<pin name="GND" x="-5.08" y="10.16" length="middle"/>
+<pin name="SDA/SDI" x="27.94" y="12.7" length="middle" rot="R180"/>
+<pin name="SCL/SCLK" x="27.94" y="10.16" length="middle" rot="R180"/>
+<pin name="SDO" x="27.94" y="7.62" length="middle" rot="R180"/>
+<pin name="AD/CS" x="27.94" y="5.08" length="middle" rot="R180"/>
+<pin name="PS" x="27.94" y="2.54" length="middle" rot="R180"/>
+<wire x1="0" y1="15.24" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="22.86" y2="0" width="0.254" layer="94"/>
+<wire x1="22.86" y1="0" x2="22.86" y2="15.24" width="0.254" layer="94"/>
+<wire x1="22.86" y1="15.24" x2="0" y2="15.24" width="0.254" layer="94"/>
+<text x="7.62" y="15.24" size="1.778" layer="95">&gt;Name</text>
+<text x="7.62" y="-2.54" size="1.778" layer="96">&gt;Value</text>
+</symbol>
+<symbol name="TITAN_X1_V10_BREAKOUT">
+<pin name="3V3" x="-5.08" y="15.24" length="middle"/>
+<pin name="GND" x="-5.08" y="12.7" length="middle"/>
+<pin name="WAKE" x="25.4" y="15.24" length="middle" rot="R180"/>
+<pin name="RESETN" x="25.4" y="12.7" length="middle" rot="R180"/>
+<pin name="PPS" x="25.4" y="7.62" length="middle" rot="R180"/>
+<pin name="RX" x="25.4" y="5.08" length="middle" rot="R180"/>
+<pin name="TX" x="25.4" y="2.54" length="middle" rot="R180"/>
+<pin name="SCL" x="-5.08" y="7.62" length="middle"/>
+<pin name="SDA" x="-5.08" y="5.08" length="middle"/>
+<wire x1="0" y1="17.78" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="20.32" y2="0" width="0.254" layer="94"/>
+<wire x1="20.32" y1="0" x2="20.32" y2="17.78" width="0.254" layer="94"/>
+<wire x1="20.32" y1="17.78" x2="0" y2="17.78" width="0.254" layer="94"/>
+<text x="5.08" y="17.78" size="1.778" layer="95">&gt;Name</text>
+<text x="5.08" y="-2.54" size="1.778" layer="96">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -341,6 +417,8 @@
 <devices>
 <device name="" package="RAZOR_IMU">
 <connects>
+<connect gate="G$1" pin="3V3_1" pad="3V3_1"/>
+<connect gate="G$1" pin="3V3_2" pad="3V3_2"/>
 <connect gate="G$1" pin="A0" pad="A0"/>
 <connect gate="G$1" pin="A1" pad="A1"/>
 <connect gate="G$1" pin="A2" pad="A2"/>
@@ -353,9 +431,35 @@
 <connect gate="G$1" pin="D8" pad="D8"/>
 <connect gate="G$1" pin="D9" pad="D9"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="GND_1" pad="GND_1"/>
+<connect gate="G$1" pin="GND_2" pad="GND_2"/>
 <connect gate="G$1" pin="RX" pad="D0/RXI"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
 <connect gate="G$1" pin="TX" pad="D1/TXO"/>
+<connect gate="G$1" pin="VBAT" pad="VBAT"/>
 <connect gate="G$1" pin="VCC" pad="VIN"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MS5803-14BA_BREAKOUT">
+<gates>
+<gate name="G$1" symbol="MS5803-14BA_BREAKOUT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MS5803-14BA_BREAKOUT">
+<connects>
+<connect gate="G$1" pin="3V3" pad="3V3"/>
+<connect gate="G$1" pin="AD/CS" pad="AD/CS"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="PS" pad="PS"/>
+<connect gate="G$1" pin="SCL/SCLK" pad="SCL/SCLK"/>
+<connect gate="G$1" pin="SDA/SDI" pad="SDA/SDI"/>
+<connect gate="G$1" pin="SDO" pad="SDO"/>
 </connects>
 <technologies>
 <technology name=""/>
