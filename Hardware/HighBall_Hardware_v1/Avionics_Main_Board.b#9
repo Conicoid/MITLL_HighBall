@@ -1267,13 +1267,13 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="B1" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" package="ARDUINO_MEGA" package3d_urn="urn:adsk.eagle:package:37320/1" value="ARDUINO_MEGA_R3FULL" x="106.68" y="29.21"/>
 <element name="J-01" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="SCREWTERMINAL-3.5MM-2_LOCK" package3d_urn="urn:adsk.eagle:package:38049/1" value="" x="3.81" y="93.98" rot="R270">
 <attribute name="PROD_ID" value="CONN-08399" x="3.81" y="93.98" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="VR-01" library="High Ball Library" package="RIORAND_LM2596_BREAKOUT" value="5V" x="13.97" y="54.61"/>
 <element name="VR-02" library="High Ball Library" package="RIORAND_LM2596_BREAKOUT" value="3.3V" x="13.97" y="78.74"/>
-<element name="U$1" library="High Ball Library" package="TO92" package3d_urn="urn:adsk.eagle:package:28523/2" value="LM335TO-92" x="-10.16" y="-3.81"/>
+<element name="B2" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" package="ARDUINO_MEGA" package3d_urn="urn:adsk.eagle:package:37320/1" value="ARDUINO_MEGA_R3FULL" x="43.18" y="-35.56"/>
+<element name="TIT-02" library="High Ball Library" package="TO92" package3d_urn="urn:adsk.eagle:package:28523/2" value="LM335TO-92" x="-10.16" y="-67.31"/>
 </elements>
 <signals>
 <signal name="VBAT">
@@ -1289,20 +1289,32 @@ design rules under a new name.</description>
 <contactref element="VR-01" pad="OUT-"/>
 <contactref element="VR-02" pad="IN-"/>
 <contactref element="VR-02" pad="OUT-"/>
-<contactref element="B1" pad="GND@0"/>
+<contactref element="B2" pad="GND@0"/>
 <wire x1="53.34" y1="54.61" x2="53.34" y2="78.74" width="0" layer="19" extent="1-1"/>
 <wire x1="13.97" y1="78.74" x2="53.34" y2="78.74" width="0" layer="19" extent="1-1"/>
-<wire x1="13.97" y1="54.61" x2="13.97" y2="78.74" width="0" layer="19" extent="1-1"/>
 <wire x1="3.81" y1="94.1578" x2="13.97" y2="78.74" width="0" layer="19" extent="1-1"/>
-<wire x1="97.79" y1="5.08" x2="13.97" y2="54.61" width="0" layer="19" extent="1-1"/>
+<wire x1="13.97" y1="54.61" x2="13.97" y2="78.74" width="0" layer="19" extent="1-1"/>
+<wire x1="34.29" y1="-59.69" x2="53.34" y2="54.61" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC_1">
 <contactref element="VR-01" pad="OUT+"/>
-<contactref element="B1" pad="5V@0"/>
-<wire x1="53.34" y1="71.12" x2="95.25" y2="5.08" width="0" layer="19" extent="1-1"/>
+<contactref element="B2" pad="5V@0"/>
+<contactref element="TIT-02" pad="1"/>
+<wire x1="31.75" y1="-59.69" x2="53.34" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="-8.89" y1="-67.31" x2="31.75" y2="-59.69" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC_2">
 <contactref element="VR-02" pad="OUT+"/>
+</signal>
+<signal name="AGND">
+<contactref element="B2" pad="GND@1"/>
+<contactref element="TIT-02" pad="3"/>
+<wire x1="36.83" y1="-59.69" x2="-11.43" y2="-67.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="AI-TIT-01">
+<contactref element="B2" pad="A2"/>
+<contactref element="TIT-02" pad="2"/>
+<wire x1="49.53" y1="-59.69" x2="-10.16" y2="-65.405" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
